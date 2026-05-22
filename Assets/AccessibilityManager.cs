@@ -8,11 +8,9 @@ public class AccessibilityManager : MonoBehaviour
 
     void Start()
     {
-        // Forcer le mode NORMAL (0) au lancement du jeu pour que rien ne soit actif par défaut
         ActiverModeNormal();
     }
 
-    // Fonctions publiques à appeler via les boutons de ton menu
     public void ActiverModeNormal() => AppliquerMode(0);
     public void ActiverProtanopie() => AppliquerMode(1);
     public void ActiverDeuteranopie() => AppliquerMode(2);

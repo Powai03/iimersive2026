@@ -1767,7 +1767,6 @@ UnityEngine.Texture::set_wrapMode_Injected
 UnityEngine.Texture::get_filterMode_Injected
 UnityEngine.Texture::GetDimension_Injected
 UnityEngine.Texture::get_wrapMode_Injected
-UnityEngine.Texture2D::Internal_CreateEmptyImpl
 UnityEngine.Texture2D::Internal_CreateImpl_Injected
 UnityEngine.Texture2D::ReinitializeImpl_Injected
 UnityEngine.Texture2D::ReinitializeWithTextureFormatImpl_Injected
@@ -1825,6 +1824,7 @@ UnityEngine.Transform::GetChild_Injected
 UnityEngine.Transform::GetParent_Injected
 UnityEngine.Transform::GetLocalPositionAndRotation_Injected
 UnityEngine.Transform::GetPositionAndRotation_Injected
+UnityEngine.Transform::Internal_LookAt_Injected
 UnityEngine.Transform::InverseTransformDirection_Injected
 UnityEngine.Transform::InverseTransformPoint_Injected
 UnityEngine.Transform::RotateAroundInternal_Injected

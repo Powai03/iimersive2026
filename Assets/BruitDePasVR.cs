@@ -16,7 +16,6 @@ public class BruitDePasVR : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        // On configure l'AudioSource pour qu'il puisse tourner en boucle
         audioSource.clip = sonPas;
         audioSource.loop = true;
         audioSource.playOnAwake = false;
@@ -26,27 +25,24 @@ public class BruitDePasVR : MonoBehaviour
 
     void Update()
     {
-        // On calcule la distance parcourue depuis la frame précédente
         float distanceDeplacement = Vector3.Distance(transform.position, dernierePosition);
         float vitesseActuelle = distanceDeplacement / Time.deltaTime;
 
-        // Si le joueur bouge assez vite
         if (vitesseActuelle > seuilVitesse)
         {
             if (!audioSource.isPlaying)
             {
-                audioSource.Play(); // On lance le bruit de pas en boucle
+                audioSource.Play(); 
             }
         }
         else
         {
             if (audioSource.isPlaying)
             {
-                audioSource.Stop(); // On coupe si on fait du surplace
+                audioSource.Stop(); 
             }
         }
 
-        // On sauvegarde la position pour la frame suivante
         dernierePosition = transform.position;
     }
 }

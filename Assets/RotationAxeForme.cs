@@ -13,19 +13,17 @@ public class RotationBroche : MonoBehaviour
 
     void Update()
     {
-        Vector3 vecteurAxe = Vector3.forward; // Par défaut Z
+        Vector3 vecteurAxe = Vector3.forward; 
 
-        // On sélectionne le vrai axe local de l'objet
         if (axeChoisi == AxeDeRotation.AxeDuCorps_Y)
         {
-            vecteurAxe = Vector3.up; // Axe Y (souvent la hauteur du cylindre de base)
+            vecteurAxe = Vector3.up; 
         }
         else if (axeChoisi == AxeDeRotation.AxeDuCorps_X)
         {
-            vecteurAxe = Vector3.right; // Axe X
+            vecteurAxe = Vector3.right; 
         }
 
-        // Rotation en Space.Self pour que ça suive l'inclinaison de l'objet
         transform.Rotate(vecteurAxe * vitesseRotation * Time.deltaTime, Space.Self);
     }
 }

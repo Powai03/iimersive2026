@@ -30,7 +30,6 @@ public class SerpentQuestManager : MonoBehaviour
     {
         boutonsDisponibles = new List<GameObject>(listeBoutons);
         
-        // On va chercher le gestionnaire XR de la scène
         managerGlobal = Object.FindAnyObjectByType<XRInteractionManager>();
 
         foreach (var b in listeBoutons) 
@@ -79,10 +78,8 @@ public class SerpentQuestManager : MonoBehaviour
         int indexAleatoire = Random.Range(0, boutonsDisponibles.Count);
         boutonActuel = boutonsDisponibles[indexAleatoire];
         
-        // 1. On active le bouton
         boutonActuel.SetActive(true);
 
-        // 2. FORCE REGISTER : On force Unity à lier le bouton au système XR immédiatement
         XRGrabInteractable grab = boutonActuel.GetComponent<XRGrabInteractable>();
         if (grab != null && managerGlobal != null)
         {
@@ -94,7 +91,6 @@ public class SerpentQuestManager : MonoBehaviour
 
     public void BoutonTrouve()
     {
-        // 3. UNREGISTER : On retire le bouton du système XR avant de l'éteindre
         XRGrabInteractable grab = boutonActuel.GetComponent<XRGrabInteractable>();
         if (grab != null && managerGlobal != null)
         {

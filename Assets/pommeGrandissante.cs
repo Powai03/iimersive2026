@@ -31,7 +31,6 @@ public class PommeCroissance : MonoBehaviour
             pommeScaleInitiale = pommeScaleMax * 0.05f;
             tigeScaleInitiale = tigeScaleMax * 0.05f;
 
-            // Enregistre l'emplacement exact de la tige par rapport au centre de la pomme
             positionInitialeTigeRelative = pomme.InverseTransformPoint(tige.position);
 
             pomme.localScale = pommeScaleInitiale;
@@ -68,7 +67,6 @@ public class PommeCroissance : MonoBehaviour
 
         if (pomme != null && tige != null)
         {
-            // --- 1. CALCUL DE LA CROISSANCE (Uniquement si le joueur bouge dans la salle) ---
             if (joueurDansLaSalle && progression < 1f)
             {
                 float distanceDeplacee = Vector3.Distance(transformJoueur.position, dernierePositionJoueur);
@@ -78,7 +76,6 @@ public class PommeCroissance : MonoBehaviour
                     progression += (distanceDeplacee * vitesseCroissance) / 10f;
                     progression = Mathf.Clamp01(progression);
 
-                    // On fait grandir la pomme et la tige
                     pomme.localScale = Vector3.Lerp(pommeScaleInitiale, pommeScaleMax, progression);
                     tige.localScale = Vector3.Lerp(tigeScaleInitiale, tigeScaleMax, progression);
                 }
@@ -86,8 +83,6 @@ public class PommeCroissance : MonoBehaviour
                 dernierePositionJoueur = transformJoueur.position;
             }
 
-            // --- 2. REPOSITIONNEMENT DE LA TIGE (En permanence, même à l'arrêt) ---
-            // Cette ligne s'exécute TOUT LE TEMPS pour forcer la tige à suivre la surface de la pomme
             tige.position = pomme.TransformPoint(positionInitialeTigeRelative);
         }
     }

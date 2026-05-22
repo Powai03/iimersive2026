@@ -808,6 +808,7 @@ struct BloomPostProcessPass_t6965891C7DD5601D21569BB5BC3483CBD1D731CD;
 struct BoolParameter_tAA460C5A72ADBDDB4519BFF0BA040EC202E14E95;
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22;
 struct Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3;
+struct BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23;
 struct BufferedRTHandleSystem_t986BCD1C8C6AD8B93F8F768599D6CCCE7C6A7046;
 struct BurstCompilerOptions_t5F93118F305E1B0C950C6F9AF8BCA74033DA01C9;
 struct Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098;
@@ -31563,7 +31564,7 @@ struct TrackingOriginMode_tA4B819C901D7C83B5C978B3F12855B00E40C70B1
 {
 	int32_t ___value__;
 };
-struct U3CRoutinePulsationU3Ed__10_t2C486C9863ABA7AE3E765AB8DB7B163343FF9EE9  : public RuntimeObject
+struct U3CRoutinePulsationU3Ed__12_tCE2C78F07A28965592DB36572B0ED599C615444E  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -47708,6 +47709,7 @@ struct ZoneYayoiDots_t56E1E2E973A620E578372E5A0B3CA0D328CB1FBD  : public MonoBeh
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___activeDots;
 	bool ___joueurDansLaZone;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___rondNoirTexture;
+	BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* ___zoneCollider;
 };
 struct tigeScript_tCE8059FC43217C3DAD4B5EBAAD25137DEE193F84  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -62199,7 +62201,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize9687 = { sizeof(UrgencyReset
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9688;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9688 = { sizeof(ZoneAmbianceTableau_tD7484DD9F67B2C09307B70B63A17DFC5A7263611), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9689;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9689 = { sizeof(U3CRoutinePulsationU3Ed__10_t2C486C9863ABA7AE3E765AB8DB7B163343FF9EE9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9689 = { sizeof(U3CRoutinePulsationU3Ed__12_tCE2C78F07A28965592DB36572B0ED599C615444E), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9690;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9690 = { sizeof(ZoneYayoiDots_t56E1E2E973A620E578372E5A0B3CA0D328CB1FBD), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9691;
